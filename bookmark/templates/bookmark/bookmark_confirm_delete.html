@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} 삭제하시겠습니까? {% endblock title %}
+
+{% block content %}
+
+<form action="" method="post">
+  {% csrf_token %} 
+  <div class="alert alert-danger">Do you want to delete Bookmark "{{object}}"?></div>
+  <input type="submit" value="삭제하기" class="btn btn-danger" />
+</form>
+
+{% endblock  %}
