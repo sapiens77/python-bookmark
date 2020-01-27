@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{% block title %}{% endblock %}</title>
 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -59,6 +62,9 @@
       <div class="row">
         <div class="col">
           {% block content %} {% endblock %}
+
+          {% block pagination %}
+          {% endblock pagination %}
         </div>
       </div>
     </div>
